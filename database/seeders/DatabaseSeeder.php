@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\InvesticijaSeeder;
+use Database\Seeders\InvestitorSeeder;
+use Database\Seeders\ProjekatSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $ProjekatSeeder = new ProjekatSeeder;
+        $ProjekatSeeder->run();
+
+        $InvestitorSeeder = new InvestitorSeeder;
+        $InvestitorSeeder->run();
+
+        $InvesticijaSeeder = new InvesticijaSeeder;
+        $InvesticijaSeeder->run();
     }
 }

@@ -11,6 +11,13 @@ class Investicija extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'vrednost',
+        'kredit',
+        'investitor_id',
+        'projekat_id',
+    ];
+
     public function investitor()
     {
         return $this->belongsTo(Investitor::class);

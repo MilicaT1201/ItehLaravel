@@ -10,6 +10,12 @@ class Investitor extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'firma',
+        'godOsnivanja',
+        'website',
+    ];
+
     public function investicije()
     {
         return $this->hasMany(Investicija::class);
